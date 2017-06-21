@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.professional.micromaster.firebasechat.FirebaseChatApplication;
 import com.professional.micromaster.firebasechat.R;
+import com.professional.micromaster.firebasechat.addcontact.ui.AddContactFragment;
 import com.professional.micromaster.firebasechat.contactlist.ContactListPresenter;
 import com.professional.micromaster.firebasechat.contactlist.ContactListPresenterImpl;
 import com.professional.micromaster.firebasechat.contactlist.adapter.ContactListAdapter;
@@ -100,7 +101,8 @@ public class ContactListActivity extends AppCompatActivity implements ContactLis
 
     @OnClick(R.id.fab)
     public void addContact() {
-        //TODO add fragment AddContact
+        AddContactFragment fragment = new AddContactFragment();
+        fragment.show(getSupportFragmentManager(), "");
     }
 
     @Override
