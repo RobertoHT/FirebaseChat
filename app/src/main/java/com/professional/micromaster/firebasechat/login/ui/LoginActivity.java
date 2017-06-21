@@ -11,7 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
 import com.professional.micromaster.firebasechat.R;
-import com.professional.micromaster.firebasechat.contactlist.ContactListActivity;
+import com.professional.micromaster.firebasechat.contactlist.ui.ContactListActivity;
 import com.professional.micromaster.firebasechat.login.LoginPresenter;
 import com.professional.micromaster.firebasechat.login.LoginPresenterImpl;
 
