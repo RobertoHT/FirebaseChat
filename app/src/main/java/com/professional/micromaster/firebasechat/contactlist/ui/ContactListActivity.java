@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import com.professional.micromaster.firebasechat.FirebaseChatApplication;
 import com.professional.micromaster.firebasechat.R;
 import com.professional.micromaster.firebasechat.addcontact.ui.AddContactFragment;
+import com.professional.micromaster.firebasechat.chat.ui.ChatActivity;
 import com.professional.micromaster.firebasechat.contactlist.ContactListPresenter;
 import com.professional.micromaster.firebasechat.contactlist.ContactListPresenterImpl;
 import com.professional.micromaster.firebasechat.contactlist.adapter.ContactListAdapter;
@@ -122,7 +123,10 @@ public class ContactListActivity extends AppCompatActivity implements ContactLis
 
     @Override
     public void onItemClick(User user) {
-        //TODO add Fragment Chat
+        Intent intent = new Intent(this, ChatActivity.class);
+        intent.putExtra(ChatActivity.EMAIL_KEY, user.getEmail());
+        intent.putExtra(ChatActivity.ONLINE_KEY, user.isOnline());
+        startActivity(intent);
     }
 
     @Override

@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.professional.micromaster.firebasechat.R;
 import com.professional.micromaster.firebasechat.contactlist.ui.OnItemClickListener;
+import com.professional.micromaster.firebasechat.domain.AvatarHelper;
 import com.professional.micromaster.firebasechat.entities.User;
 import com.professional.micromaster.firebasechat.lib.ImageLoader;
 
@@ -48,6 +49,8 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactListAdapter.
         holder.txtUser.setText(email);
         holder.txtStatus.setText(status);
         holder.txtStatus.setTextColor(color);
+
+        imageLoader.load(holder.imgAvatar, AvatarHelper.getAvatarUrl(email));
     }
 
     @Override
